@@ -4,12 +4,12 @@ function oxe0(){
     let soma = 0
     while (conta<=6){
         nota = Number(prompt(`Informe a nota ${conta}`));
-        soma = soma + nota;
+        soma += nota;
         conta++; //conta = conta + 1
     }
-    let media = soma /6
+    let media = soma /6;
     //mostra o resultado
-    alert (`A media das notas é: ${media.toFixed(1)}`)
+    alert (`A media das notas é: ${media.toFixed(1)}`);
 }
 
 

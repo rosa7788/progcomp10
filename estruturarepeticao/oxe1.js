@@ -9,12 +9,12 @@ function pesquisaSatisfacao (){
     while (conta<= participantes){
         nota = Number(prompt(`Qual a nota de participação ${conta}:`));
         conta++;
-        soma = nota + soma;
+        soma += nota;
         if (nota<=8){
             satisfeitos++;
-        } else if (nota<5){
+        } else if(nota<5){
             insatisfeitos++;
-        }
+        } 
     }
 
     let media = soma/participantes
