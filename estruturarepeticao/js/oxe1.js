@@ -3,7 +3,6 @@ function pesquisaSatisfacao (){
     let nota; 
     let participantes = 10;
     let satisfeitos = 0;
-    let meioTermo = 0;
     let insatisfeitos = 0;
     let conta = 1;
 
@@ -13,20 +12,15 @@ function pesquisaSatisfacao (){
         soma += nota;
         if (nota >= 8){
             satisfeitos++;
-        } else if (nota < 8 && nota > 5){
-            meioTermo++;
-        } else{
+        } else if (nota<5){
             insatisfeitos++;
-        }  
+        } 
     }
 
     let media = soma/participantes
     alert(`A média das notas é: ${media}`);
     alert(`Participantes satisfeitos: ${satisfeitos}`);
     alert(`Participantes insatisfeitos: ${insatisfeitos}`);
-    alert(`Participantes de meio termo: ${meioTermo}`);
-
-
 }
 
 
