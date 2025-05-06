@@ -1,4 +1,4 @@
-/* function oxe0(){
+function oxe0(){
     let nota //guarda as notas
     let conta = 1; //conta de 1 a 6
     let soma = 0
@@ -11,6 +11,6 @@
     //mostra o resultado
     alert (`A media das notas é: ${media.toFixed(1)}`)
 }
-*/ 
+
 
 
