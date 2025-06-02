@@ -27,5 +27,5 @@ function exe7(){
     }
     alert (`Item 1. ${qtdIdade50mais}`)
     alert (`Item 2. ${somaAltura/qtdIdade10e20}`)
-    alert (`Item 3. ${qtdPesomenor40/5 * 100}`)
+    alert (`Item 3. ${(qtdPesomenor40/5) * 100}`)
 }
