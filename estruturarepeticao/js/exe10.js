@@ -30,6 +30,6 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log("Soma dos pares: " + somaPares);
-console.log("Soma dos primos:" + somaPrimos);
+console.log("Soma dos primos:" + somaPrimos);
 }
 }
