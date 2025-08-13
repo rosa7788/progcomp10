@@ -12,7 +12,7 @@ for (let i = 0; i < 5;i++){
         ano: ano,
         paginas: paginas
     };
-    bibliolteca.push(livro);
+    biblioteca.push(livro);
 }
 
 let maior = biblioteca[0]
@@ -26,5 +26,5 @@ for (let i=0;i<biblioteca.length;i++){
     }
     soma = soma + biblioteca[i].paginas
 }
-console.log(`O título do livro com mais páginas é ${maior.tiutlo}`)
+console.log(`O título do livro com mais páginas é ${maior.titulo}`)
 console.log(`O título do livro com mais páginas é ${soma}`)
