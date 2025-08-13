@@ -27,4 +27,4 @@ for (let i=0;i<biblioteca.length;i++){
     soma = soma + biblioteca[i].paginas
 }
 console.log(`O título do livro com mais páginas é ${maior.tiutlo}`)
-console.log(`O título do livro com mais páginas é ${soma/5}`)
+console.log(`O título do livro com mais páginas é ${soma}`)
