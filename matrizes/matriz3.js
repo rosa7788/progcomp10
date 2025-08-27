@@ -31,6 +31,7 @@ for (let i = 0; i < poluicao.length; i++){
     somaDiagonal += poluicao[i][i]
 }
 console.log (`A média da soma diagonal é: ${somaDiagonal/poluicao.length}`)
+
 //exibir todos os valores da diagonal secundária e calcular a média
 
 let somaDiagonalsecundaria = 0
@@ -39,6 +40,23 @@ for (let i = 0; i < 5; i++){
     somaDiagonal += poluicao[i][4 - i]
 }
 console.log (`A média da diagonal secundária é: ${somaDiagonal/poluicao.length}`)
+
+//exibir qual região (linha) teve o maior índice de poluição registrado e em qual dia (coluna) isso ocorre
+let maior = poluicao[0][0]
+let jMaior = 0
+let iMaior = 0
+for (let i = 0; i < 5; i++){
+for (let j = 0; j < 5; j++){
+    if (poluicao[i][j] > maior){
+        maior = poluicao[i][j]
+        iMaior = i
+        jMaior = j
+    }
+}
+}
+console.log (`O nível ${maior} ocorreu na região ${regioes[iMaior]} no dia ${dias[jMaior]}`)
+
+
 
 
 
