@@ -10,7 +10,7 @@ for (let i = 0; i < 5; i++){
     dias.push(Number(prompt(`Informe o dia: ${i + 1}`)))
 }
 
-//cria a matriz e adciona os níveis de poluição
+//cria a matriz e adiciona os níveis de poluição
 let poluicao = []
 
 for (let i = 0; i < 5; i++){
