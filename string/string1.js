@@ -11,3 +11,5 @@ let invertidaString = invertida.join("")
 if (invertida === limpa){ //compra duas strings
     alert (`São palídromas`)
 }
+
+
