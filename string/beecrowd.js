@@ -39,4 +39,57 @@ for (let i = 2; i <= pacote+1;i++){
 let faltam = total - nova.size
 console.log(faltam)
 
+//2770
+
+input = "10 10 3\n 5 5\n 10 10\n 5 25\n 2 3 1\n 3 2"
+lines = input.split(/\s + /) //elemento separador dos espaços e \n
+
+let i = 0
+while (i < lines.length){
+    let x = parseInt(lines[i++]) // i = 0 //altura da placa da empresa
+    let y = parseInt(lines[i++]) // i = 1 // largura da placa da empresa
+    let p = parseInt(lines[i++]) //qunatas placas
+    for (let j = 0; j < p; j++){
+        let Xi = parseInt(lines[i++]) //altura da placa do usuario
+        let Yi = parseInt(lines[i++]) //largura da placa do usuario
+        if ((Xi <= x && Yi <= y) || (Xi <= y && Yi <= x)){
+            console.log('Sim')
+        } 
+        else {
+            console.log('Nao')
+        }
+    }
+
+}
+
+//1179
+
+let par = []
+let impar = []
+
+for(let i = 0; i < lines.length; i++){
+    if (lines[i] % 2 === 0){
+        par.push(lines[i]);
+        if (par.length === 5){ //encheu
+            for(let i = 0; i < 5; i++){
+                console.log(`par[${i}] = ${par[i]}`);
+            }
+            par = []; //esvazia
+        }
+    } else {
+        impar.push(lines[i]);
+        for (let i = 0; i < 5; i++){
+        if(impar.length === 5){
+            console.log(`impar[${i}] = ${impar[i]}`)
+        }
+    }
+    
+        impar = []
+    }
+}
+
+
+
+
+
 
