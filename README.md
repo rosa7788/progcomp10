@@ -4,6 +4,8 @@ Este repositório contém atividades desenvolvidas durante as aulas de programa�
 
 ## 🛠️ Tecnologias Utilizadas
 - **JavaScript**
+- **HTML**
+- **CSS**
   
 
 ## 🚀 Objetivo
