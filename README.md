@@ -3,7 +3,6 @@
 Este repositório contém atividades desenvolvidas durante as aulas de programação, servindo como prática e fixação dos conteúdos estudados.  
 
 ## 🛠️ Tecnologias Utilizadas
-- **Python**
 - **JavaScript**
   
 
