@@ -4,12 +4,14 @@ function main(){
     //passagem de parâmetro por refêrencia
     alternarVetor(vetor)
     console.log(vetor)
+    
 }
 function alternarVetor (v) {
     v[0] = 100 //altera variavel vetor do main()
 
 }
 function alternarNumero (p){
-    let x = 100
+    let x = 100 
+
 }
 main()
