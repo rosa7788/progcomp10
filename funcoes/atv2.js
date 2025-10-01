@@ -10,6 +10,6 @@ function alternarVetor (v) {
 
 }
 function alternarNumero (p){
-    let p = 100
+    let x = 100
 }
 main()
