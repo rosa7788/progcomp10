@@ -1,4 +1,4 @@
-/*let filme = [{
+let filme = [{
     nome: "Bailarina",
     ano: 2020,
     pais: "Coreia",
@@ -17,8 +17,8 @@
 for(let i =0; i<filme.length; i++){
 console.log(`O ator é:${filme[i].ator}`)
 }
-*/
 
+//atv
 let biblioteca = [];
 
 for (let i = 0; i < 3; i++){
