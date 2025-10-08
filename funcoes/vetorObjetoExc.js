@@ -50,7 +50,13 @@ function salarioNome (funcionarios, nome){
 }
 
 function atualizarCargo (funcionarios){
-    nomeCargo = prompt (`Digite o nome para atualizar:`)
+    for (let i = 0; i < funcionarios.length; i ++){
+        if (funcionarios[i].nome == nome){
+            let novoCargo = prompt (`Informe o novo cargo:`)
+        }
+    }
+    
+
 }
 
 
