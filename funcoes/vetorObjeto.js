@@ -24,6 +24,7 @@ function removeAluno (alunos, nome){
     for (let i = 0; i < alunos.length; i++){
         if (alunos[i].nome == nome){ //encontrei aqui
             alunos.splice (i, 1) // removed do vetor
+            alert (`Aluno removido`)
             return //sai da funcao
         }
     }
@@ -42,7 +43,8 @@ function main(){
             case 2: listarNomes (vetor); break;
             case 3: aumentarIdade (vetor); break;
             case 4: let nomeRemove = prompt(`Informe nome para remover`)
-                    removeAluno (vetor, nomeRemove)
+                    removeAluno (vetor, nomeRemove);
+                    break;
             case 5: alert (`Programa encerrado`); break;
             default: alert (`Opção inválida`); break;
         }
