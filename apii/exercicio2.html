@@ -1,3 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            padding: 8px;
+            margin-right: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        li {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            width: 180px;
+            padding: 10px;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 8px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #333;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galeria de Fotos</h1>
+
+    <input type="number" id="quantidade" placeholder="Ex: 20" min="1" max="5000">
+    <button onclick="carregarFotos()">Carregar Fotos</button>
+
+    <ul id="listaFotos"></ul>
+
+    <script>
+        async function carregarFotos() {
+            try {
+                // Lê o valor digitado pelo usuário
+                const quantidade = document.getElementById("quantidade").value;
+
+                // Valida o número
+                if (!quantidade || quantidade <= 0) {
+                    alert("Por favor, digite um número válido.");
+                    return;
+                }
+
+                // Monta a URL dinamicamente
+                const url = `https://jsonplaceholder.typicode.com/photos?_limit=${quantidade}`;
+
+                // Busca os dados da API
+                const resposta = await fetch(url);
+                const fotos = await resposta.json();
+
+                const lista = document.getElementById("listaFotos");
+                lista.innerHTML = ""; // limpa a lista
+
+                // Exibe cada foto
+                fotos.forEach(foto => {
+                    const li = document.createElement("li");
+
+                    const titulo = document.createElement("p");
+                    titulo.textContent = foto.title;
+
+                    const imagem = document.createElement("img");
+                    imagem.src = foto.thumbnailUrl;
+                    imagem.alt = foto.title;
+
+                    li.appendChild(imagem);
+                    li.appendChild(titulo);
+                    lista.appendChild(li);
+                });
+            } catch (erro) {
+                console.error("Erro ao carregar fotos:", erro);
+                alert("Não foi possível carregar as fotos da API.");
+            }
+        }
+    </script>
+</body>
+</html>
