@@ -2,8 +2,11 @@ const notas = [10, 9, 8, 7, 6, 5, 6, 7, 8, 9];
 
 let somaNotas = 0;
 let aprovados = 0;
+//let notaspares = 0
+
 
 console.log("Todas as notas:");
+//notas.forEach(nota, indice) => {
 notas.forEach(function(nota, indice) {
     somaNotas += nota;
     console.log(`Nota ${indice + 1}: ${nota}`);
@@ -12,6 +15,8 @@ notas.forEach(function(nota, indice) {
         aprovados++;
     }
 });
+//if (posicao % 2 == 0){
+//} posicoesPares.push(nota)
 
 console.log(`Soma total das notas: ${somaNotas}`);
 console.log (`Média total das notas: ${(somaNotas / notas.length).toFixed(2)}`);
