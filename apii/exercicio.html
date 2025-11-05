@@ -13,7 +13,7 @@
         // Função chamada ao clicar no botão
         async function carregarUsuarios() {
             try {
-                // Aguarda resposta da API
+                // await -> Aguarda resposta da API
                 const resposta = await fetch("https://jsonplaceholder.typicode.com/users");
                 // Converte resposta para JSON
                 const usuarios = await resposta.json();
